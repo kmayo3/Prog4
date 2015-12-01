@@ -10,9 +10,6 @@ fileID = fopen(file_name, 'r');
 
 %%size = [150 7511];
 landmarks = dlmread(fileID, ',');
- 
-
-for i = 1:10;
 
 Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct.jpg/i000qa-fn.jpg');
 
@@ -20,25 +17,22 @@ imagesc(Images);
 
 colormap('gray');
 
-endfor
-
 %%standard face triangle
-x = [50, -75];
-y = [1, -20];
-z = [75, -20];
+x = [50; -75;1];
+y = [1; -20;1];
+z = [75; -20;1];
+stdface = [x, y, z];
 
-stdface = [x y z];
+%%transformation 1
+A1 = [55, -24, 90; -75, -16, -28;1,1,1];
+T1 = stdface * inv(A1);
 
-%%find triangle in input image's coordinates
-tricoor = [landmarks];
+%%transformation 2
+A2 = [30, -30, 58; -75,-35,-23;1,1,1];
+T2 = stdface * inv(A2);
 
-%%define affine map from standard to input
-
-
-
-%%affine transformation
-%%tform = affine3d();
-%%A = [a b c 0; d e f 0; g h i 0; j k l 1];
+%%transformation 3
+A3 = [
 
 %%coordinate transformation: maps input triangle to standard triangle
 %%x' = x *cos(theta) + y*cos(theta);
