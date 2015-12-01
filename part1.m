@@ -8,20 +8,41 @@ file_name = 'muct76.csv';
 
 fileID = fopen(file_name, 'r');
 
-landmarks = dlmread("file_name.csv", '%s %d');
+%%size = [150 7511];
+landmarks = dlmread(fileID, ',');
+ 
 
+for i = 1:10;
 
-fclose(fileID);
+Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct.jpg/i000qa-fn.jpg');
 
- for i = 1:10;
-%%set matrix to specific size
-
-Images = imread(strcat('small-muct./jpg', char(landmarks(i))));
-
-I2 = im2double(Images);
-imshow(I2);
-B = imagesc(reshape(T, 250, 250));
+imagesc(Images);
 
 colormap('gray');
 
 endfor
+
+%%standard face triangle
+x = [50, -75];
+y = [1, -20];
+z = [75, -20];
+
+stdface = [x y z];
+
+%%find triangle in input image's coordinates
+tricoor = [landmarks];
+
+%%define affine map from standard to input
+
+
+
+%%affine transformation
+%%tform = affine3d();
+%%A = [a b c 0; d e f 0; g h i 0; j k l 1];
+
+%%coordinate transformation: maps input triangle to standard triangle
+%%x' = x *cos(theta) + y*cos(theta);
+%%y' = -x *sin(theta) + y*cos(theta);
+%%z' = z;
+
+fclose(fileID);
