@@ -85,7 +85,7 @@ T10 = stdface * inv(A10);
 %%warp geometric transformation 't' to images 1-10
 M = 10;
 
-for i:10
+for i=1:M;
 
 B = imwarp(Images,T1)
 
