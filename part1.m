@@ -12,16 +12,10 @@ file_name = 'muct76.csv';
 %%open and read the muct76 file
 fileID = fopen(file_name, 'r');
 
-%%sets the size for the matrix
-%%size = [150 7511];
-
-%%read in the landmarks
-%%fileID = fopen('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\jpg', 'r');
-%%landmarks = dlmread(fileID, ',');
-
+%%gets the image
 scrimage = dir('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\*.jpg');
 fileimages = strcat('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\', scrimage);
-%%gets the image
+
 Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\jpg');
 
 %%displays the matrix as a color image
@@ -84,7 +78,7 @@ T10 = stdface * inv(A10);
 %%warp geometric transformation 't' to images 1-10
 M = 10;
 
-for i:M
+for i:10
 
 B = imwarp(Images,T1)
 
