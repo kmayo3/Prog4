@@ -41,7 +41,6 @@ A1 = [55, 1, 90; -75, -24, -10;1,1,1];
 T1 = stdface * inv(A1);
 
 %%transformation 2
-
 A2 = [30, -30, 58; -91,-35,-23;1 1 1];
 T2 = stdface * inv(A2);
 
