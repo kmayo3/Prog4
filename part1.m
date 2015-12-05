@@ -18,9 +18,6 @@ scrimage = dir('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\*.jpg');
 
 Images = imread('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct.jpg/i000qa-fn.jpg');
 
-%%sets the size for the matrix
-%%size = [150 7511];
-
 %%read in the landmarks
 landmarks = dlmread(fileID, ',');
 
