@@ -13,7 +13,10 @@ Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct.jpg/i000qa-f
 x = [-55 47 132 56 1 90 4 80 21 50];
 y = [-78 -187 -85 -72 -100 -18 -110 -112 -70 -55];
 
-%%
+%%referenced from http://www.mathworks.com/help/matlab/math/delaunay-triangulation.html
+%%you could compute the barycentric coordinates, find a centroid, define vertices
+%%find the convex hull by unioning all the triangles together 
+%%algorithm used for point location
 triangle = delaunay(x,y)
 hold on, triplot(triangle,x,y), hold off
 
