@@ -12,6 +12,7 @@ clf
 x = [-55 47 132 56 1 90 4 80 21 50];
 y = [-78 -187 -85 -72 -100 -18 -110 -112 -70 -55];
 
+%%
 triangle = delaunay(x,y)
 hold on, triplot(triangle,x,y), hold off
 
