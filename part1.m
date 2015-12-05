@@ -13,20 +13,16 @@ file_name = 'muct76.csv';
 fileID = fopen(file_name, 'r');
 
 %%gets the image
-scrimage = dir('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\*.jpg');
-fileimages = strcat('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\', scrimage);
+scrimage = dir('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\*.jpg');
+fileimages = strcat('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\', scrimage);
 
-Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct\jpg');
+Images = imread(fileimages);
 
 %%sets the size for the matrix
 %%size = [150 7511];
 
 %%read in the landmarks
 landmarks = dlmread(fileID, ',');
-
-%%gets the image
-%%Images = imread('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct.jpg/i000qa-fn.jpg');
-
 
 %%displays the matrix as a color image
 imagesc(Images);
@@ -83,14 +79,32 @@ T10 = stdface * inv(A10);
 
 
 %%warp geometric transformation 't' to images 1-10
-M = 10;
+%%M = 10;
 
-for i=1:M;
+%%for i=1:M;
 
 B = imwarp(Images,T1)
+C = imwarp(Images,T2)
+D = imwarp(Images,T3)
+E = imwarp(Images,T4)
+F = imwarp(Images,T5)
+G = imwarp(Images,T6)
+H = imwarp(Images,T7)
+I = imwarp(Images,T8)
+J = imwarp(Images,T9)
+K = imwarp(Images,T10)
 
 imshow(B)
+imshow(C)
+imshow(D)
+imshow(E)
+imshow(F)
+imshow(G)
+imshow(H)
+imshow(I)
+imshow(J)
+imshow(K)
 
-endfor
+%%endfor
 
 fclose(fileID);
