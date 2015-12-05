@@ -16,7 +16,7 @@ fileID = fopen(file_name, 'r');
 scrimage = dir('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\*.jpg');
 %%fileimages = strcat('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\', scrimage);
 
-Images = imread('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct.jpg/i000qa-fn.jpg');
+Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct.jpg/i000qa-fn.jpg');
 
 %%read in the landmarks
 landmarks = dlmread(fileID, ',');

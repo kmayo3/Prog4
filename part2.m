@@ -12,6 +12,11 @@ fileID = fopen(file_name, 'r');
 %%read in the landmarks
 landmarks = dlmread(fileID, ',');
 
+scrimage = dir('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\*.jpg');
+%%fileimages = strcat('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\', scrimage);
+
+Images = imread('C:\Users\Maegen\Documents\cs 1300\Prog4\small_muct.jpg/i000qa-fn.jpg');
+
 %%standard face triangle
 %%formed by averaging the x and y values from the first ten pictures
 %%x2,x7,x12,x67,x31,x36,x48,x54,x39,x43
@@ -32,6 +37,8 @@ A1 = [-38 52 127 55 1 90 11 89 24 81; -88 -181 127 -75 -24 -16 -111 -106 -79 -72
 
 %%solve for the unknown U in order to get the least squares solution
 u1 = inv(A1' * A1) * A1' * stdface;
+
+%%apply u to image 
 
 %%Form A matrix on ten images
 A2 = [-80 19 84 30 -30 58 -27 54 -6 45; -98 -197 -95 -91 -35 -28 -125 -120 -89 -83];
