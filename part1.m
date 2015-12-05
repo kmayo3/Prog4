@@ -14,9 +14,9 @@ fileID = fopen(file_name, 'r');
 
 %%gets the image
 scrimage = dir('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\*.jpg');
-fileimages = strcat('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\', scrimage);
+%%fileimages = strcat('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct\', scrimage);
 
-Images = imread(fileimages);
+Images = imread('C:\Users\Katlyn\Documents\GitHub\Prog4\small_muct.jpg/i000qa-fn.jpg');
 
 %%sets the size for the matrix
 %%size = [150 7511];
@@ -25,7 +25,7 @@ Images = imread(fileimages);
 landmarks = dlmread(fileID, ',');
 
 %%displays the matrix as a color image
-imagesc(Images);
+%%imagesc(Images);
 
 %%sets the current colormap to gray
 colormap('gray');
@@ -82,27 +82,27 @@ T10 = stdface * inv(A10);
 
 %%for i=1:M;
 
-B = imwarp(Images,T1)
-C = imwarp(Images,T2)
-D = imwarp(Images,T3)
-E = imwarp(Images,T4)
-F = imwarp(Images,T5)
-G = imwarp(Images,T6)
-H = imwarp(Images,T7)
-I = imwarp(Images,T8)
-J = imwarp(Images,T9)
-K = imwarp(Images,T10)
+B = imperspectivewarp(Images,T1)
+%%C = imperspectivewarp(Images,T2)
+%%D = imperspectivewarp(Images,T3)
+%%E = imperspectivewarp(Images,T4)
+%%F = imperspectivewarp(Images,T5)
+%%G = imperspectivewarp(Images,T6)
+%%H = imperspectivewarp(Images,T7)
+%%I = imperspectivewarp(Images,T8)
+%%J = imperspectivewarp(Images,T9)
+%%K = imperspectivewarp(Images,T10)
 
 imshow(B)
-imshow(C)
-imshow(D)
-imshow(E)
-imshow(F)
-imshow(G)
-imshow(H)
-imshow(I)
-imshow(J)
-imshow(K)
+%%imshow(C)
+%%imshow(D)
+%%imshow(E)
+%%imshow(F)
+%%imshow(G)
+%%imshow(H)
+%%imshow(I)
+%%imshow(J)
+%%imshow(K)
 
 %%endfor
 
